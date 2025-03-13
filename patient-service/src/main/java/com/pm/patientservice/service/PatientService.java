@@ -20,7 +20,7 @@ public class PatientService {
     }
 
     //why used patientResponseDTO
-    public List<PatientResponseDTO> getPatient() {
+    public List<PatientResponseDTO> getPatients() {
         List<Patient> patients = patientRepository.findAll();
         //converting patient entity model object into patientResponseDTO object
 
