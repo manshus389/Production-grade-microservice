@@ -34,7 +34,12 @@ public class PatientService {
 
     //why used patientRequestDTO
     public PatientResponseDTO createPatient(PatientRequestDTO patientRequestDTO) {
-        Patient newPatient = patientRepository.save(patientRequestDTO);
+
         //need to use mapper to convert patientRequestDTO to patient Model entity because above is giving error
+
+        Patient newPatient = patientRepository.save(PatientMapper.toModel(patientRequestDTO));
+
+        return PatientMapper.toDTO(newPatient);
+
     }
 }
