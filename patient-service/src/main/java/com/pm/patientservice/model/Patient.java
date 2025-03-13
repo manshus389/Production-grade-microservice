@@ -30,7 +30,7 @@ public class Patient {
     private LocalDate dateOfBirth;
 
     @NotNull
-    private LocalDate registered;
+    private LocalDate registered_date;
 
 
     public UUID getId() {
@@ -74,11 +74,11 @@ public class Patient {
     }
 
     public LocalDate getRegistered() {
-        return registered;
+        return registered_date;
     }
 
     public void setRegistered(LocalDate registered) {
-        this.registered = registered;
+        this.registered_date = registered_date;
     }
 
 
