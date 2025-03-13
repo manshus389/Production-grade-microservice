@@ -24,10 +24,11 @@ public class PatientService {
         List<Patient> patients = patientRepository.findAll();
         //converting patient entity model object into patientResponseDTO object
 
-        List<PatientResponseDTO> patientResponseDTOs = patients.stream()
+        //.map(patient -> PatientMapper.toDTO(patient)) was changed to method reference
+        return patients.stream()
                 .map(PatientMapper::toDTO).toList();
 
-        //.map(patient -> PatientMapper.toDTO(patient)) was changed to method reference
-        return patientResponseDTOs;
+        //List<PatientResponseDTO> patientResponseDTOs = patients.stream()
+                //.map(PatientMapper::toDTO).toList(); it was replaced by inline variable
     }
 }
