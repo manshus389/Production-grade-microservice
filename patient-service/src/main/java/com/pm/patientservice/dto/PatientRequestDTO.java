@@ -24,6 +24,7 @@ public class PatientRequestDTO {
     @NotBlank(message = "Date of birth is required")
     private String dateOfBirth;
 
+    //fixed the bug and now registeredDate is not mandatory in the updatePatient endpoint
     @NotBlank(groups = CreatePatientValidationGroup.class,message = "Registered date is required")
     private String registeredDate;
 
