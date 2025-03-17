@@ -101,7 +101,11 @@
             <artifactId>protobuf-java</artifactId>
             <version>4.29.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>3.3.0</version>
+        </dependency>
 
     </dependencies>
 
@@ -129,10 +133,10 @@
                 <version>0.6.1</version>
                 <configuration>
                     <!-- Use the correct protoc binary for ARM64 -->
-                    <protocArtifact>com.google.protobuf:protoc:3.25.5:exe:linux-aarch_64</protocArtifact>
+                    <protocArtifact>com.google.protobuf:protoc:3.25.5:exe:${os.detected.classifier}</protocArtifact>
 
                     <pluginId>grpc-java</pluginId>
-                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.68.1:exe:linux-aarch_64</pluginArtifact>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.68.1:exe:${os.detected.classifier}</pluginArtifact>
                 </configuration>
                 <executions>
                     <execution>
