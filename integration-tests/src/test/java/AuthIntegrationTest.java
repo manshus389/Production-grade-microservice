@@ -55,7 +55,7 @@ public class AuthIntegrationTest {
                 """;
 
 //we are not acting in the below test case
-        given()
+         given()
                 .contentType("application/json")
                 .body(loginPayload)
                 .when()
