@@ -2,5 +2,5 @@
 ### http://localhost:4000/patients when the container was exposed on docker network to access patient service directly
 ### also removed port binding from docker run configuration so that we cannot make the direct request to the patient service
 
-GET http://localhost:4004/api/patients
+GET http://lb-7f71ded9.elb.localhost.localstack.cloud:4004/api/patients
 Authorization: Bearer {{token}}

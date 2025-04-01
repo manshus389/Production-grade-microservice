@@ -1,7 +1,10 @@
 ### Login Request to retrieve a token
 
-POST http://localhost:4004/auth/login
+###POST http://localhost:4004/auth/login
+### changing domain to hostname(new ALB) after deploying to prod
+POST http://lb-7f71ded9.elb.localhost.localstack.cloud:4004/auth/login
 Content-Type: application/json
+
 
 {
   "email": "testuser@test.com",
