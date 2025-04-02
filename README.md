@@ -1,4 +1,4 @@
-# 🚀 Patient Management Microservice 🎉🔍🛠️
+# 🚀 Patient Management Microservice 🔍🛠️
 
 The **Patient Management Microservice** is designed to handle patient records, billing, and analytics in a scalable and efficient manner using microservices architecture. It ensures seamless communication between different services while maintaining security, reliability, and cloud compatibility. ⚙️🔗🛡️  
 
